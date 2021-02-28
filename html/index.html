@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>chessboardjs Example #1000 - Empty Board</title>
+  <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css" integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU" crossorigin="anonymous">
+</head>
+<body>
+
+<p>Chessboard.js initializes to an empty board with no second argument.</p>
+
+<!--- Begin Example HTML ------------------------------------------------------>
+<div id="board2" style="width: 400px"></div>
+<button id="startBtn">Start Position</button>
+<button id="clearBtn">Clear Board</button>
+<!--- End Example HTML -------------------------------------------------------->
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
+        crossorigin="anonymous"></script>
+
+
+<script src="/js/chessboard-1.0.0.js"></script>
+
+
+
+<script>
+	var board2 = Chessboard('board2', {
+  		draggable: true,
+  		dropOffBoard: 'trash',
+  		sparePieces: true
+	})
+
+$('#startBtn').on('click', board2.start)
+$('#clearBtn').on('click', board2.clear)
+
+</script>
+
+
+</body>
+</html>
+
